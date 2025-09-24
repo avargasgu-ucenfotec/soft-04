@@ -11,6 +11,7 @@ public class Suscripcion {
         periocidad = periocidadObjeto;
     }
 
+    //Getters
     public String getTipo() {
         return tipo;
     }
@@ -23,6 +24,7 @@ public class Suscripcion {
         return periocidad;
     }
 
+    //Setters
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
@@ -35,7 +37,15 @@ public class Suscripcion {
         this.periocidad = periocidad;
     }
 
+    //equals()
     public boolean equals(Suscripcion otraSuscripcion) {
         return(tipo.equals(otraSuscripcion.tipo) && periocidad == otraSuscripcion.periocidad);
+    }
+
+    //toString()
+    public String toString(){
+        return "\nTipo: " + tipo +
+                "\nCosto: " + costo +
+                "\nPeriocidad: " + periocidad;
     }
 }

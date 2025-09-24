@@ -39,10 +39,23 @@ public class Main {
                 (byte)12
         );
 
+        //Procesar suscripción
         String transaccion = cliente1.suscribirse(suscripcion1);
         System.out.println(transaccion);
 
         //Pasar argumento de forma anónima.
         System.out.println(cliente2.suscribirse(suscripcion2));
+
+        //Comparar clientes.
+        System.out.println(cliente1.equals(cliente2));
+
+        //Comparar suscripciones.
+        System.out.println(suscripcion1.equals(suscripcion2));
+
+        //Imprimir información del objeto cliente.
+        System.out.println(cliente1);
+
+        //Imprimir información del objeto suscripción.
+        System.out.println(suscripcion1);
     }
 }

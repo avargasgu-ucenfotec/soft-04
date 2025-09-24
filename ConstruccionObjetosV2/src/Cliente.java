@@ -29,6 +29,7 @@ public class Cliente {
 
     Cliente(){}
 
+    //Getters
     public String getNombre() {
         return nombre;
     }
@@ -49,6 +50,7 @@ public class Cliente {
         return ubicacion;
     }
 
+    //Setters
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
@@ -69,8 +71,18 @@ public class Cliente {
         this.ubicacion = ubicacion;
     }
 
+    //equals()
     public boolean equals(Cliente otroCliente) {
         return(cedula.equals(otroCliente.cedula));
+    }
+
+    //toString()
+    public String toString(){
+        return "\nNombre: " + nombre +
+                "\nApellidos: " + apellidos +
+                "\nCédula: " + cedula +
+                "\nSexo: " + sexo +
+                "\nUbicación: " + ubicacion;
     }
 
     public String suscribirse(Suscripcion suscripcion){
