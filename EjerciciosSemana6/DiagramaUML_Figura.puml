@@ -1,0 +1,74 @@
+@startuml
+class Circulo {
+- double radio
++ double getRadio()
++ void setRadio(double)
++ double calcularArea()
++ double calcularPerimetro()
+}
+
+
+class Figura {
+# double lado
++ double getLado()
++ void setLado(double)
++ double calcularArea()
++ double calcularPerimetro()
+}
+
+
+class Rectangulo {
+- double largo
+- double ancho
++ double getLargo()
++ double getAncho()
++ void setLargo(double)
++ void setAncho(double)
++ double calcularArea()
++ double calcularPerimetro()
+}
+
+
+class Cuenta {
+# String id
+# double saldo
++ String getId()
++ double getSaldo()
++ void setId(String)
++ void setSaldo(double)
++ void depositar(double)
++ void retirar(double)
+}
+
+
+class EmpleadoRH {
++ void trabajar()
++ void contratarEmpleado()
+}
+
+class CuentaAhorros {
++ void retirar(double)
+}
+
+class Main {
++ {static} void main(String[])
+}
+
+class Empleado {
+# String nombre
+# String apellidos
+# String puesto
+- {static} int HORAS_TRABAJADAS_DIA
+- {static} double PAGO_HORA
++ void trabajar()
++ double calcularSalario()
+}
+
+
+
+
+Figura <|-- Circulo
+Figura <|-- Rectangulo
+Empleado <|-- EmpleadoRH
+Cuenta <|-- CuentaAhorros
+@enduml
